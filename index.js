@@ -1,12 +1,11 @@
-function superbowlWin(record) {
-  const gameResult = record.find(callback);
-  if (gameResult) {
-    return gameResult.year;
-  } else {
-    return undefined;
-  }
-}
+function superbowlWin (record) {
+ 
+  const seasonResult = record.find((record) => {
+    return record["result"] === "W"})
+  
+  if (seasonResult) {
+    return seasonResult.year 
+  }    
+} 
 
-function callback(record) {
-  return record.result === "W";
-}
+superbowlWin ()
